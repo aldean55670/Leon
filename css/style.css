@@ -1,0 +1,591 @@
+* {
+
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #10cab7;
+    --secend-color: #2c4755;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:slnt,wght@-11..11,200..1000&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
+    font-family: "Work Sans", 'Cario', sans-serif;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Start componac */
+.spacial-head {
+    color: #ebeced;
+    font-size: 100px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin: 0;
+    padding-bottom: 60px;
+
+}
+
+.spacial-head+p {
+    margin: -20px;
+    font-size: 20px;
+    text-align: center;
+    color: #79797979;
+}
+
+@media (max-width: 767px) {
+    .spacial-head {
+        font-size: 60px;
+    }
+
+    .spacial-head+p {
+        margin: -14px;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .mainlogo,
+    .mainhead {
+
+        width: 620px;
+    }
+}
+
+/* End componac */
+.container {
+    width: 600px;
+    margin: auto;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media(min-width:768px) {
+    .container {
+        width: 670px;
+    }
+}
+
+@media(min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media(min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.container .logo img {
+    width: 30px;
+}
+
+
+
+/* .bras {
+    width: 30px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    cursor: pointer;
+} 
+ .bras span{
+    height: 4px;
+    background-color: #333;
+    border-radius: 2px;
+    width: 100%;
+    display: block;
+} */
+
+/* 
+    BIRGER LOGO
+*/
+.bras {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    width: 30px;
+    cursor: pointer;
+    position: relative;
+    top: 6px;
+}
+
+.bras span {
+    background-color: #333;
+    height: 2px;
+    margin-bottom: 5px;
+
+
+}
+
+.bras:hover span:nth-child(2) {
+    width: 100%;
+
+
+}
+
+.bras span:first-child {
+
+    width: 100%;
+}
+
+.bras span:nth-child(2) {
+    width: 60%;
+    transition: .3s;
+
+}
+
+.bras span:last-child {
+    width: 100%;
+    ;
+}
+
+/* 
+   END BIRGER LOGO
+*/
+
+.logo {
+    /* HEAD */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links {
+    /* BIRGER LOGO AND LINKS */
+    position: relative;
+}
+
+.logo .links ul {
+    /* LINKS */
+    list-style: none;
+    margin: -7px;
+    padding: 0;
+    position: absolute;
+    right: 0;
+
+    min-width: 200px;
+    top: calc(100% + 15px);
+
+    display: none;
+}
+
+.links:hover ul {
+    display: block;
+    z-index: 1;
+
+}
+
+/* .logo :hover ul {
+   display: inline-block;
+} */
+header .links ul::before {
+    content: "";
+    border-color: transparent transparent #ddd transparent;
+    border-width: 10px;
+
+    border-style: solid;
+    position: absolute;
+    right: 5px;
+    top: -20;
+
+}
+
+/* .logo a:hover{
+    color: #0000ff85;
+} */
+.logo img {
+    border-left: black solid 4px;
+}
+
+.links ul {
+    padding: 15px;
+    color: #333;
+
+}
+
+.links ul li a {
+    display: block;
+    text-decoration: none;
+    transition: 1s;
+    padding-bottom: 15px;
+    color: #333;
+    margin: 1px;
+
+}
+
+.links ul li:not(:last-child) {
+    border-bottom: .1px solid #DDD;
+
+}
+
+.links ul li a:hover {
+    padding-left: 15px;
+}
+
+.mainhead {
+    background-color: #eee;
+    text-align: center;
+    text-transform: capitalize;
+    height: 500px;
+
+}
+
+.mainhead h2,
+.mainhead p {
+    position: relative;
+    top: 97px;
+
+}
+
+.mainhead h2 {
+    font-weight: bold;
+    font-size: 50px;
+    color: var(--main-color);
+    display: inline-block;
+}
+
+/* main logo */
+.mainlogo {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+
+}
+
+.mainlogo .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.feet {
+    padding: 20px;
+    text-align: center;
+}
+
+.feet i {
+    color: var(--main-color);
+}
+
+.feet h3 {
+    font-weight: 800;
+    margin: 30px 0;
+}
+
+.feet p {
+    line-height: 1.8;
+    color: #777;
+    font-size: 17px;
+
+}
+
+/* end main logo */
+
+/* Srart Services */
+.Services {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* End Services */
+.image {
+    position: relative;
+}
+
+.image img {
+
+    width: 272px;
+    height: 390px;
+
+}
+
+.image::after {
+    content: "";
+    background-color: var(--secend-color);
+    width: 100px;
+    height: calc(100% + 100px);
+    position: absolute;
+    right: -50px;
+    top: -50px;
+    z-index: -1;
+}
+
+@media (max-width: 1199px) {
+    .image {
+        display: none;
+    }
+}
+
+.serveces-contant {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 60px;
+
+    text-align: center;
+
+}
+
+.serveces-contant .col {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.serveces-contant .col p {
+    color: #777;
+    font-size: 17px;
+    /* line-height: 1.8; */
+}
+
+.serveces-contant .serv {
+    display: flex;
+}
+
+.Services i {
+    color: var(--main-color);
+    flex-basis: 60px;
+}
+
+h3 {
+    text-transform: capitalize;
+    font-weight: 800;
+}
+
+.text h3 {
+    margin-top: 0;
+}
+
+.portofolio-col img {
+    margin-top: 60px;
+    width: 300px;
+    height: 250px;
+
+}
+
+.portofolio-contant {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding-bottom: 60px;
+
+}
+
+.prtofoloio {
+    background-color: #f6f6f6;
+}
+
+.portofolio-col .info {
+    text-align: center;
+    background-color: white;
+    width: 300px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+.portofolio-col .info p {
+    color: #777;
+    font-size: 18px;
+
+}
+
+.portofolio-col .info h3 {
+    margin: 0;
+}
+
+@media (max-width: 767px) {
+    .portofolio-col img {
+        width: 550px;
+        margin-top: 60px;
+    }
+
+    .portofolio-col .info {
+        width: 550px;
+        /* padding-bottom: 30px; */
+    }
+
+    .portofolio-col .info p {
+
+        padding-right: 80px;
+    }
+}
+
+.about-contant {
+
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* start about */
+.about {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+
+
+.about-contant .images {
+    position: relative;
+    width: 250px;
+    height: 100%;
+}
+
+.images::before {
+    content: "";
+    background-color: #ebeced;
+    width: 100px;
+    height: calc(100% + 80px);
+    position: absolute;
+    bottom: -40px;
+    left: -20px;
+    z-index: -1;
+
+}
+
+.images::after {
+    content: "";
+    /* width: 120px;
+    background-color: red;
+    height: 300px;
+    position: absolute;
+    right: -163px;
+    bottom: 0;
+    border-left: 60px solid;
+    
+    border-bottom: 80px solid;
+    border-color: black; */
+
+}
+
+.images::after {
+    content: "";
+    position: absolute;
+    right: -195px;
+    width: 120px;
+    height: 300px;
+    border-left: var(--main-color) solid 80px;
+    border-bottom: var(--main-color) solid 80px;
+    top: -26px;
+    z-index: -1;
+}
+
+.about-contant .text {
+    flex-basis: calc(100% - 500px);
+    padding-bottom: 10px;
+}
+
+.about-contant .text p:first-of-type {
+    font-weight: bold;
+    line-height: 2;
+    margin-bottom: 39px;
+}
+
+.about-contant .text hr {
+    width: 50%;
+    border-color: var(--main-color);
+    display: inline-block;
+}
+
+.about-contant .text p:last-of-type {
+    line-height: 2;
+    color: #777;
+}
+
+@media(max-width:991px) {
+    .about-contant {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .images::after,
+    .images::before {
+        display: none;
+    }
+
+    .images img {
+        margin: 0 180px 60px;
+    }
+}
+
+/* end about */
+/* start contact */
+.contact {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+}
+
+.contact .info {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.contact .info .lobal {
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--secend-color);
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+}
+
+.contact .info .link {
+    display: block;
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.contact .info .social {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    font-size: 16px;
+}
+
+.contact .info .social i {
+    margin-left: 10px;
+    color: var(--secend-color);
+}
+
+@media(max-width:767px) {
+
+    .contact .info .link,
+    .contact .info .lobal {
+        font-size: 25px;
+
+    }
+}
+
+/* end contact */
+.footer {
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    background-color: var(--secend-color);
+    color: white;
+
+}
+
+.footer span {
+    font-weight: 800;
+    color: var(--main-color);
+}
